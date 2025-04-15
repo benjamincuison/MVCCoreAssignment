@@ -1,5 +1,8 @@
-﻿namespace MVCCoreAssignment.Models
+﻿using System.Runtime.Serialization;
+
+namespace MVCCoreAssignment.Models
 {
+    [Serializable]
     public class Identity
     {
         public Identity() { 
@@ -13,6 +16,7 @@
             this.Term = string.Empty;
             this.Group = string.Empty;
         }
+        [DataMember]
         public int Id { get; set; } // Student / Faculty ID
         public Models.PersonalInfo PersonalInfo { get; set; } // Encapsulates data about name, email, phone, and address
         public bool Active { get; set; } // Determines if currently working or attending the school

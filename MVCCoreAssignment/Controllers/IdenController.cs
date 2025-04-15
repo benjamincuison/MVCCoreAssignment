@@ -82,5 +82,10 @@ namespace MVCCoreAssignment.Controllers
             return Json(studentList);
 
         }
+        [HttpPost]
+        public JsonResult SaveIdentity([FromBody] Models.Identity identity)
+        {
+            return Json(identity);
+        }
     }
 }
